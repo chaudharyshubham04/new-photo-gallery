@@ -11,12 +11,9 @@ const multer=require("multer");
 const path=require("path");
 var methodOverride=require("method-override");
 const mongoose=require("mongoose");
-require('./db/mongoose');
+// require('./db/mongoose');
 
- // mongoose.connect("mongodb://localhost:27017/yelp_camp",{
- // 	useNewUrlParser:true,
- // 	useUnifiedTopology:true
- // });
+  
 
 mongoose.connect(process.env.MONGODB_URI,{
   	useNewUrlParser:true,
