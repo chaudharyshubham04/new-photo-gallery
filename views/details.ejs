@@ -1,0 +1,25 @@
+<%-include("partials/header")-%> 
+ 
+<div style="text-align: center;"> 
+
+ 
+<h2 class="m-2 text-uppercase" style="font-weight: bold; letter-spacing: 2px; word-spacing: 10px;"><%= campground.name %></h2>
+
+<div class="container"> 
+<img src="./uploads/<%=campground.image%>" style="border-radius: 8px;  max-width: 100%; " class="mt-2 mb-3" >            
+</div>
+
+<h4  class="p-2" style="border: 2px solid black;
+  margin:0 auto;  
+
+  text-align: center;
+  border-radius: 10px;
+  border-style: inset;
+   width:60%;"><%= campground.description %></h4>
+ 
+</div>
+ <form action="/campgrounds/<%=campground._id%>?_method=DELETE" method="post" >
+ 	<button type="submit" class="btn btn-primary ">Delete</button>
+</form> 
+ 
+<%-include("partials/footer")-%>

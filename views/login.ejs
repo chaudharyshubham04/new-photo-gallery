@@ -1,0 +1,21 @@
+<%-include("partials/header")-%>
+<div style="margin-left:30%"> 
+<h1 style="margin-left:6% ">Login</h1>            <!--   style="margin-left:10%" -->
+
+<form action="/login" method="post"  >
+	<div class="form-group" style="width: 50%;text-align: center; margin-top: 2rem; margin-bottom: 1rem;"> 
+	<input type="text" name="username" placeholder="username" class="form-control  m-2 text-center" autocomplete="off">
+	<input type="password" name="password" placeholder="password"  class="form-control m-2 text-center">
+	<button type="submit" class="btn btn-primary btn-block m-2">Login</button>
+	</div>
+</form>
+
+ 
+	<p>Or<a href="/register"> Sign Up!</a> </p>   <!--      style="margin-left:8%"> -->
+	 
+</div>	 
+ 
+<footer class="text-center " style="margin-left:-7% padding-left:20px; "> 
+<p>made by Shubham Chaudhary</p>
+</footer>
+<%-include("partials/footer")-%>
