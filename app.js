@@ -49,7 +49,7 @@ app.use(methodOverride("_method"));
 
 
 app.use(require("express-session")({
-	secret:"heyy guy",
+	secret:process.env.SECRET,
 	resave:false,
 	saveUninitialized:false
 }));
@@ -79,7 +79,7 @@ app.use(function(req,res,next){
 
 app.get("/",function(req,res){
 	res. sendFile(__dirname+"/index.html");
-	// res.render("show");
+	 
 });
 
  
@@ -101,39 +101,14 @@ app.get("/campgrounds/new",isLoggedIn,function(req,res){
 	res.render("new");
 });
 
-// app.post("/campgrounds",upload,isLoggedIn,function(req,res){
-// 	//get back data from form and add to compounds array
-// 	//redirect back to campground
-// 	var imageFile=req.file.filename;
-                                                                           //orignal code  =============
-// 	var post=
-// 	{ name:req.body.name,
-//       image:imageFile,
-//       description:req.body.desc
-//   };
-    
-     
-//      Campground.create(post,function(err,campground){
-//      	if(err){
-//      		console.log(err);
-//      	}else{
-//      		console.log("successsfully added");
-//      		console.log(campground);
-//      	}
-//      });
-//      res.redirect("/campgrounds");
-// });
+
 
 app.post("/campgrounds",upload,isLoggedIn,function(req,res){
 	//get back data from form and add to compounds array
 	//redirect back to campground
 	var imageFile=req.file.filename;
 
-	// var post=                                                             //edited code  ===========
-	// { name:req.body.name,
- //      image:imageFile,
- //      description:req.body.desc
- //  };
+	 
     User.findOne({username:req.user.username},function(err,user){         
 		if(err){                                        
 			console.log(err);
