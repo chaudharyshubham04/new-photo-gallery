@@ -1,21 +1,36 @@
-<%-include("partials/header")-%>
-<div style="margin-left:30%"> 
-<h1 style="margin-left:6% ">Login</h1>            <!--   style="margin-left:10%" -->
-
-<form action="/login" method="post"  >
-	<div class="form-group" style="width: 50%;text-align: center; margin-top: 2rem; margin-bottom: 1rem;"> 
+ <%-include("partials/header")-%>
+ <header style="text-align:center; margin-top: 10%; margin-bottom:4%;">
+ 	<h1 style="font-size: 60px;font-family:sans-serif; letter-spacing: 2px; ">Login</h1> 
+ </header>
+                
+<div style="margin-left:30%; ">
+	<form action="/login" method="post"  >
+	<div class="form-group" style="width: 50%;"> 
 	<input type="text" name="username" placeholder="username" class="form-control  m-2 text-center" autocomplete="off">
 	<input type="password" name="password" placeholder="password"  class="form-control m-2 text-center">
-	<button type="submit" class="btn btn-primary btn-block m-2">Login</button>
+	<button type="submit" class="btn btn-primary btn-block m-2" style="">Login</button>
 	</div>
 </form>
 
- 
-	<p>Or<a href="/register"> Sign Up!</a> </p>   <!--      style="margin-left:8%"> -->
+</div >
+
+ <section style="text-align: center;">
+ 	<h6>Or Don't have a account ?<a href="/register" style="text-decoration: none;" > Sign Up!</a></h6>  
+ </section>
+	
+
+<footer  style="text-align: center;margin-bottom:0rem;" >
+	<p >made by Shubham Chaudhary</p> 
+</footer>	         
 	 
-</div>	 
+ 	 
  
-<footer class="text-center " style="margin-left:-7% padding-left:20px; "> 
-<p>made by Shubham Chaudhary</p>
-</footer>
+  
+ 
+ 
 <%-include("partials/footer")-%>
+
+
+
+
+ 

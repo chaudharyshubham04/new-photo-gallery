@@ -1,19 +1,32 @@
- <%-include("partials/header")-%>
- <div style=" margin-left:30%; margin-top:10vh; "> 
- <h1 style=" margin:0 20 0 20;">Sign Up</h1>
+ 
 
-<form action="/register" method="post">
-	<div class="form-group" style=" width: 50%;text-align: center; margin-top: 2rem; margin-bottom: 1rem;"> 
-	<input type="text" name="username" placeholder="username" class="form-control m-2 text-center" autocomplete="off">
-	<input type="password" name="password" placeholder="password" class="form-control m-2 text-center">
-	 <button type="submit" class="btn btn-primary btn-block m-2">Sign Up!</button>
+  <%-include("partials/header")-%>
+ <header style="text-align:center; margin-top: 10%; margin-bottom: 4%;">
+ 	<h1 style="font-size: 60px;font-family:sans-serif; letter-spacing: 2px;">SignUp</h1> 
+ </header>
+            
+ 
+
+<div style="margin-left:30%; ">
+	<form action="/register" method="post"  >
+	<div class="form-group" style="width: 50%;"> 
+	<input type="text" name="username" placeholder="username" class="form-control  m-2 text-center" autocomplete="off">
+	<input type="password" name="password" placeholder="password"  class="form-control m-2 text-center">
+	<button type="submit" class="btn btn-primary btn-block m-2" >Sign Up!</button>
 	</div>
-
 </form>
 
-  <p>Already a User?<a href="/login"> Login!</a> </p>
+</div >
 
-</div>  
+
+
+ <section style="text-align: center;">
+ 	<h6> Already a User?<a href="/login" style="text-decoration: none;"> Login!</a>
+ 	</h6>  
+ </section>
+
+  
+  
 
 <%-include("partials/footer")-%>
  
